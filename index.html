@@ -32,7 +32,7 @@
 							<h2>Menu</h2>
 							<ul class="links">
 								<li><a href="index.html">Home</a></li>
-								<!-- <li><a href="generic.html">Generic</a></li> -->
+								<li><a href="#">Download Resume</a></li>
 								<li><a href="elements.html">Template elements</a></li>
 								
 								<!-- <li><a href="#">Log In</a></li>
@@ -164,7 +164,7 @@
 									</section>
 									<ul class="actions">
 										<li><a href="https://github.com/Suizer98/suizer/raw/main/Resume_Tey%20Sui%20Zer.pdf" onclick="return confirm('Download file?');"
-										       data-view-component="true" download="Resume_Tey Sui Zer.pdf" class="button">Download my resume</a></li>
+										       data-view-component="true" download="Resume_Tey Sui Zer.pdf" id="my_element" class="button">Download my resume</a></li>
 									</ul>
 								</div>
 							</section>
@@ -229,6 +229,15 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script 
+				var my_element = document.getElementById("my_element");
+
+				my_element.scrollIntoView({
+ 				behavior: "smooth",
+  				block: "start",
+  				inline: "nearest"
+				});
+			</script>
 		
 	</body>
 </html>
