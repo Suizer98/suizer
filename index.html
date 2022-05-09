@@ -229,20 +229,9 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script
-				function download(url, filename) {
-				fetch(url).then(function(t) {
-    					return t.blob().then((b)=>{
-        				var a = document.createElement("a");
-        				a.href = URL.createObjectURL(b);
-        				a.setAttribute("download", filename);
-        				a.click();
-    						}
-    						);
-					});
-					}
-
-				download("http://github.com/Suizer98/suizer/raw/82da21baed44807afd3816c8fb77cb442e8e8957/CV-Tey%20Sui%20Zer.pdf")
-				
+				function download{
+				window.open(http://github.com/Suizer98/suizer/raw/82da21baed44807afd3816c8fb77cb442e8e8957/CV-Tey%20Sui%20Zer.pdf, '_blank');
+				}
 				
 				
 			</script>
