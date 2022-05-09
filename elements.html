@@ -31,7 +31,7 @@
 							<h2>Menu</h2>
 							<ul class="links">
 								<li><a href="https://suizer98.github.io/suizer/">Home</a></li>
-								<li><a href="https://suizer98.github.io/suizer/">Download Resume</a></li>
+								<li><a href="https://suizer98.github.io/suizer/#my_resume">Download Resume</a></li>
 								<!-- <li><a href="generic.html">Generic</a></li> -->
 								<li><a href="elements.html">Template elements</a></li>
 								<!-- <li><a href="#">Log In</a></li>
@@ -418,23 +418,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			// Add smooth scrolling to all links
 			$('a[href="#my_resume"]').on('click', function(event) {
 				location.href='https://suizer98.github.io/suizer/';
-				// Make sure this.hash has a value before overriding default behavior
-				if (this.hash !== "") {
-				// Prevent default anchor click behavior
-				event.preventDefault();
-
-				// Store hash
-				var hash = this.hash;
-
-				// Using jQuery's animate() method to add smooth page scroll
-				// The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-				$('html, body').animate({
-					scrollTop: $(hash).offset().top - $(window).height()/2
-				}, 700, function(){
-
-					// Add hash (#) to URL when done scrolling (default click behavior)
-					window.location.hash = hash;
-				});
+				 $('body', 'html').scrollTo('#my_resume');
 				} // End if
 			});
 			});
