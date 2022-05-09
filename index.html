@@ -32,8 +32,10 @@
 							<h2>Menu</h2>
 							<ul class="links">
 								<li><a href="index.html">Home</a></li>
-								<li><a href="#">Download Resume</a></li>
-								<li><a href="elements.html">Template elements</a></li>
+								<li><a href="#my_resume">Download Resume</a></li>
+								<!-- href="#my_resume" -->
+								<li><a href="elements.html" >Template elements</a></li>
+					
 								
 								<!-- <li><a href="#">Log In</a></li>
 								<li><a href="#">Sign Up</a></li> -->
@@ -164,7 +166,7 @@
 									</section>
 									<ul class="actions">
 										<li><a href="https://github.com/Suizer98/suizer/raw/main/Resume_Tey%20Sui%20Zer.pdf" onclick="return confirm('Download file?');"
-										       data-view-component="true" download="Resume_Tey Sui Zer.pdf" id="my_element" class="button">Download my resume</a></li>
+										       data-view-component="true" download="Resume_Tey Sui Zer.pdf" id="my_resume" class="button">Download my resume</a></li>
 									</ul>
 								</div>
 							</section>
@@ -229,15 +231,34 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<script 
-				var my_element = document.getElementById("my_element");
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+			<script>
+			$(document).ready(function(){
+			// Add smooth scrolling to all links
+			$('a[href="#my_resume"]').on('click', function(event) {
 
-				my_element.scrollIntoView({
- 				behavior: "smooth",
-  				block: "start",
-  				inline: "nearest"
+				// Make sure this.hash has a value before overriding default behavior
+				if (this.hash !== "") {
+				// Prevent default anchor click behavior
+				event.preventDefault();
+
+				// Store hash
+				var hash = this.hash;
+
+				// Using jQuery's animate() method to add smooth page scroll
+				// The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+				$('html, body').animate({
+					scrollTop: $(hash).offset().top - $(window).height()/2
+				}, 700, function(){
+
+					// Add hash (#) to URL when done scrolling (default click behavior)
+					window.location.hash = hash;
 				});
-			></script>
+				} // End if
+			});
+			});
+			</script>
+			
 		
 	</body>
 </html>
